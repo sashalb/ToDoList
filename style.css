@@ -1,5 +1,60 @@
+body
+{
+    background-color: #B9D8C2;  /*cambridge blue*/
+    color: #4A5043;             /*rifle green*/
+}
+
+h1
+{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.top-text
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.input-group
+{
+    margin-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-color: #4A5043;
+}
+
+.form-control
+{
+    border-color: #8AA1B1;      /*cadet grey*/
+}
+
+.btn
+{
+    background-color: #8AA1B1;      /*cadet grey*/
+    color: white;
+}
+
+.list-group-item
+{
+    background-color: #B9D8C2;  /*cambridge blue*/
+    color: #4A5043;             /*rifle green*/
+}
+
+.darkmodeButton
+{
+    position: center;
+    border-style: outset;
+}
+
 .done
 {
     text-decoration: line-through;
     color: grey;
+}
+
+.darkmode       /*inverting background and text colors*/
+{
+    background-color: #4A5043;  
+    color: #B9D8C2
 }

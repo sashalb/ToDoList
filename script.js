@@ -1,6 +1,6 @@
 var items = [];      //item holder
 var listHolder = document.getElementById('list-holder');        //list holder
-var addTodo = document.getElementById('add-todo');          //add ToDo button
+var addTodo = document.getElementById('add-item');          //add item button
 
 //adding a loadList function to populate my to do list
 loadList = function()
@@ -11,12 +11,12 @@ loadList = function()
         listItem.className = "list-group-item todo-list";   //setting up the classes for the elements
         listItem.innerHTML = element;                       //setting up its inner HTML
 
-        //adding an eventListener for each item
+        //adding an eventListener for each item that gets done
         listItem.addEventListener('click', function(){
             listItem.classList.toggle("done");              //item gets crossed-out and greyed-out when clicked
         });
 
-        //adding an eventListener to remove items
+        //adding an eventListener to remove items when double-clicked
         listItem.addEventListener("dblclick", function(){
             items.splice(index, 1);                         //splice method to remove the item defined by the index, 1 because I'll only remove one item
             loadList();                                     //after removing an item, the list gets refreshed    
@@ -26,10 +26,10 @@ loadList = function()
     });
 }
 
-//adding an event listener on my ToDo button
+//adding an event listener on my Add Item button
 addTodo.addEventListener('click', function(){
-    let txtTodo = document.getElementById('txt-todo-name');     //value of text input
-    let todoName = txtTodo.value;          //value of text input
+    let txtTodo = document.getElementById('txt-todo-name');     //getting the text input
+    let todoName = txtTodo.value;                               //considering the value of text input
 
     if(todoName != ""){                         //if I input text: todoName goes into my "items" array
         items.push(todoName);       
@@ -40,3 +40,10 @@ addTodo.addEventListener('click', function(){
         alert("You must provide an item!");
     }
 });
+
+//darkmode script
+function darkMode()
+{
+    var element = document.body;
+    element.classList.toggle("darkmode");
+}
